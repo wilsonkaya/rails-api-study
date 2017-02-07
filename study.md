@@ -41,7 +41,8 @@ In your own words, define what the responsibilities of the model layer are in
 Rails.
 
 ```md
-<!-- your answer here -->
+MVC pattern seperates the Model, Controller and View section  of the progrem. The
+Models are the classes to alter the database.
 ```
 
 ## Define Controller Responsiblities
@@ -50,7 +51,9 @@ In your own words, define what the responsibilities of the controller layer are
 in Rails.
 
 ```md
-<!-- your answer here -->
+Controller is the mechanism which decides what to do according to users input.
+It reaches the database via models to get the necessary info and pass the outcome
+to view.
 ```
 
 ## Define Router Responsiblities
@@ -58,7 +61,8 @@ in Rails.
 In your own words, define what the router does in Rails.
 
 ```md
-<!-- your answer here -->
+It has two main objects: destination and verb. It reaches the destination and
+it excutes the verb.
 ```
 
 ## The Request-Response Cycle in Rails
@@ -67,5 +71,9 @@ Starting with a client making a GET request to a particular URL, describe how
 the parts of Rails interact to produce and send a response.
 
 ```md
-<!-- your answer here -->
+Router will be seperating URL from the verb and passing them to controller;
+controller with the obtained information will finding the right model; model will
+be reaching the database to get the necessary information and convert into JSON
+and turn it back to controller. Finally, controller will pass it to view which
+reads and presents it to client. 
 ```
